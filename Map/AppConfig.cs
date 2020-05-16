@@ -8,6 +8,6 @@ namespace Map
 {
     class AppConfig
     {
-        public static string Key { get; } = @"http://maps.google.com/maps/api/js?key=AIzaSyDLr0n_YoAwKDSbvdeZGdr8NbqYl45HiAA";
+        public static string Key { get; } = @"###";
     }
 }
