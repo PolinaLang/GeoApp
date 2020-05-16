@@ -181,8 +181,8 @@ namespace Map
             gMap.PolygonsEnabled = true;
             // Разрешение маршрутов
             gMap.RoutesEnabled = true;
-            gMap.MaxZoom = 18;
-            gMap.MinZoom = 2;
+            gMap.MaxZoom = 16;
+            gMap.MinZoom = 4;
             gMap.Zoom = 7;
             zoomBar.Value = (int)gMap.Zoom;
             // Чья карта используется
@@ -369,7 +369,7 @@ namespace Map
         {
             PointLatLng p = new PointLatLng(Convert.ToDouble(textLatA.Text), Convert.ToDouble(textLngA.Text));
             points.Add(p);
-            GMapMarker m = new GMarkerGoogle(p, GMarkerGoogleType.yellow_dot);
+            GMapMarker m = new GMarkerGoogle(p, GMarkerGoogleType.orange_dot);
             Objects.Markers.Add(m);
             gMap.Overlays.Add(Objects);
         }

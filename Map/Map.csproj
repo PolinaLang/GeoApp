@@ -200,6 +200,12 @@
   <ItemGroup>
     <None Include="Resources\delete-geotag.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-geotag-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-geotag-1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -708,8 +708,8 @@ namespace Map
                 ID = 607,
                 Name = "Общий Сырт",
                 Description = "",
-                GeoLat = 52.5,
-                GeoLng = 53,
+                GeoLat = 52.295218,
+                GeoLng = 52.180433,
                 AreaName = "Оренбургская область",
                 AreaID = 6,
             });
@@ -718,8 +718,8 @@ namespace Map
                 ID = 608,
                 Name = "Оренбургский государственный природный заповедник",
                 Description = "",
-                GeoLat = 51.76235,
-                GeoLng = 55.09461,
+                GeoLat = 51.104443,
+                GeoLng = 57.662523,
                 AreaName = "Оренбургская область",
                 AreaID = 6,
             });

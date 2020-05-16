@@ -30,29 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.topPanel = new System.Windows.Forms.Panel();
-            this.buttonMinus = new System.Windows.Forms.Button();
-            this.buttonResize = new System.Windows.Forms.Button();
-            this.buttonClose = new System.Windows.Forms.Button();
             this.timerSubMenu = new System.Windows.Forms.Timer(this.components);
             this.panel7 = new System.Windows.Forms.Panel();
-            this.picRoute1 = new System.Windows.Forms.Button();
-            this.picRoute = new System.Windows.Forms.Button();
-            this.picArea = new System.Windows.Forms.Button();
-            this.buttonMenu = new System.Windows.Forms.Button();
             this.timerHideMenu = new System.Windows.Forms.Timer(this.components);
             this.panel8 = new System.Windows.Forms.Panel();
             this.zoomBar = new System.Windows.Forms.TrackBar();
             this.gMap = new GMap.NET.WindowsForms.GMapControl();
             this.panelSubMenu2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.buttonRoute = new System.Windows.Forms.Button();
             this.startPanel = new System.Windows.Forms.Panel();
             this.labelLng = new System.Windows.Forms.Label();
             this.labelLat = new System.Windows.Forms.Label();
             this.textLngA = new System.Windows.Forms.TextBox();
             this.textLatA = new System.Windows.Forms.TextBox();
-            this.btnAddPoint = new System.Windows.Forms.Button();
-            this.btnRoute = new System.Windows.Forms.Button();
-            this.btnClearRoute = new System.Windows.Forms.Button();
             this.endPanel = new System.Windows.Forms.Panel();
             this.labelTime = new System.Windows.Forms.Label();
             this.labelDir = new System.Windows.Forms.Label();
@@ -64,24 +53,35 @@
             this.panelSubMenu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonArea2 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonArea1 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.buttonArea3 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.buttonArea4 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.buttonArea5 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.buttonArea6 = new System.Windows.Forms.Button();
+            this.timerSubMenuR = new System.Windows.Forms.Timer(this.components);
+            this.buttonMinus = new System.Windows.Forms.Button();
+            this.buttonResize = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.buttonArea = new System.Windows.Forms.Button();
-            this.timerSubMenuR = new System.Windows.Forms.Timer(this.components);
+            this.buttonRoute = new System.Windows.Forms.Button();
+            this.btnAddPoint = new System.Windows.Forms.Button();
+            this.btnRoute = new System.Windows.Forms.Button();
+            this.btnClearRoute = new System.Windows.Forms.Button();
+            this.picRoute1 = new System.Windows.Forms.Button();
+            this.picRoute = new System.Windows.Forms.Button();
+            this.picArea = new System.Windows.Forms.Button();
+            this.buttonMenu = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -113,54 +113,6 @@
             this.topPanel.TabIndex = 5;
             this.topPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseDown);
             // 
-            // buttonMinus
-            // 
-            this.buttonMinus.BackgroundImage = global::Map.Properties.Resources.minus;
-            this.buttonMinus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonMinus.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMinus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(178)))), ((int)(((byte)(65)))));
-            this.buttonMinus.Location = new System.Drawing.Point(884, 0);
-            this.buttonMinus.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonMinus.Name = "buttonMinus";
-            this.buttonMinus.Size = new System.Drawing.Size(30, 32);
-            this.buttonMinus.TabIndex = 1;
-            this.buttonMinus.Text = " ";
-            this.buttonMinus.UseVisualStyleBackColor = true;
-            this.buttonMinus.Click += new System.EventHandler(this.buttonMinus_Click);
-            // 
-            // buttonResize
-            // 
-            this.buttonResize.BackgroundImage = global::Map.Properties.Resources.arrow_right_up;
-            this.buttonResize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonResize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonResize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonResize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(178)))), ((int)(((byte)(65)))));
-            this.buttonResize.Location = new System.Drawing.Point(914, 0);
-            this.buttonResize.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonResize.Name = "buttonResize";
-            this.buttonResize.Size = new System.Drawing.Size(30, 32);
-            this.buttonResize.TabIndex = 1;
-            this.buttonResize.Text = " ";
-            this.buttonResize.UseVisualStyleBackColor = true;
-            this.buttonResize.Click += new System.EventHandler(this.buttonResize_Click);
-            // 
-            // buttonClose
-            // 
-            this.buttonClose.BackgroundImage = global::Map.Properties.Resources.close;
-            this.buttonClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(178)))), ((int)(((byte)(65)))));
-            this.buttonClose.Location = new System.Drawing.Point(944, 0);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(30, 32);
-            this.buttonClose.TabIndex = 1;
-            this.buttonClose.Text = " ";
-            this.buttonClose.UseVisualStyleBackColor = true;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
-            // 
             // timerSubMenu
             // 
             this.timerSubMenu.Interval = 15;
@@ -179,71 +131,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(38, 650);
             this.panel7.TabIndex = 6;
-            // 
-            // picRoute1
-            // 
-            this.picRoute1.BackgroundImage = global::Map.Properties.Resources.compass_direction_new;
-            this.picRoute1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picRoute1.Enabled = false;
-            this.picRoute1.FlatAppearance.BorderSize = 0;
-            this.picRoute1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.picRoute1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(146)))), ((int)(((byte)(64)))));
-            this.picRoute1.Location = new System.Drawing.Point(0, 380);
-            this.picRoute1.Margin = new System.Windows.Forms.Padding(0);
-            this.picRoute1.Name = "picRoute1";
-            this.picRoute1.Size = new System.Drawing.Size(38, 41);
-            this.picRoute1.TabIndex = 4;
-            this.picRoute1.Text = " ";
-            this.picRoute1.UseVisualStyleBackColor = true;
-            this.picRoute1.Visible = false;
-            // 
-            // picRoute
-            // 
-            this.picRoute.BackgroundImage = global::Map.Properties.Resources.compass_direction_new;
-            this.picRoute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picRoute.Enabled = false;
-            this.picRoute.FlatAppearance.BorderSize = 0;
-            this.picRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.picRoute.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(146)))), ((int)(((byte)(64)))));
-            this.picRoute.Location = new System.Drawing.Point(0, 88);
-            this.picRoute.Margin = new System.Windows.Forms.Padding(0);
-            this.picRoute.Name = "picRoute";
-            this.picRoute.Size = new System.Drawing.Size(38, 41);
-            this.picRoute.TabIndex = 3;
-            this.picRoute.Text = " ";
-            this.picRoute.UseVisualStyleBackColor = true;
-            // 
-            // picArea
-            // 
-            this.picArea.BackgroundImage = global::Map.Properties.Resources.markers_new;
-            this.picArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picArea.Enabled = false;
-            this.picArea.FlatAppearance.BorderSize = 0;
-            this.picArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.picArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(146)))), ((int)(((byte)(64)))));
-            this.picArea.Location = new System.Drawing.Point(0, 37);
-            this.picArea.Margin = new System.Windows.Forms.Padding(0);
-            this.picArea.Name = "picArea";
-            this.picArea.Size = new System.Drawing.Size(38, 41);
-            this.picArea.TabIndex = 2;
-            this.picArea.Text = " ";
-            this.picArea.UseVisualStyleBackColor = true;
-            // 
-            // buttonMenu
-            // 
-            this.buttonMenu.BackgroundImage = global::Map.Properties.Resources.menu;
-            this.buttonMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonMenu.FlatAppearance.BorderSize = 0;
-            this.buttonMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(146)))), ((int)(((byte)(64)))));
-            this.buttonMenu.Location = new System.Drawing.Point(0, 0);
-            this.buttonMenu.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonMenu.Name = "buttonMenu";
-            this.buttonMenu.Size = new System.Drawing.Size(38, 32);
-            this.buttonMenu.TabIndex = 1;
-            this.buttonMenu.Text = " ";
-            this.buttonMenu.UseVisualStyleBackColor = true;
-            this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
             // 
             // timerHideMenu
             // 
@@ -267,15 +154,15 @@
             this.zoomBar.BackColor = System.Drawing.Color.White;
             this.zoomBar.LargeChange = 2;
             this.zoomBar.Location = new System.Drawing.Point(917, 487);
-            this.zoomBar.Maximum = 18;
-            this.zoomBar.Minimum = 2;
+            this.zoomBar.Maximum = 16;
+            this.zoomBar.Minimum = 4;
             this.zoomBar.Name = "zoomBar";
             this.zoomBar.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.zoomBar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.zoomBar.Size = new System.Drawing.Size(45, 119);
             this.zoomBar.TabIndex = 2;
             this.zoomBar.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.zoomBar.Value = 2;
+            this.zoomBar.Value = 4;
             this.zoomBar.Scroll += new System.EventHandler(this.zoomBar_Scroll);
             // 
             // gMap
@@ -325,26 +212,6 @@
             this.panelSubMenu2.Name = "panelSubMenu2";
             this.panelSubMenu2.Size = new System.Drawing.Size(188, 341);
             this.panelSubMenu2.TabIndex = 1;
-            // 
-            // buttonRoute
-            // 
-            this.buttonRoute.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonRoute.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.buttonRoute.FlatAppearance.BorderSize = 0;
-            this.buttonRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRoute.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRoute.Image = global::Map.Properties.Resources.angle_up;
-            this.buttonRoute.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonRoute.Location = new System.Drawing.Point(0, 0);
-            this.buttonRoute.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonRoute.MinimumSize = new System.Drawing.Size(188, 49);
-            this.buttonRoute.Name = "buttonRoute";
-            this.buttonRoute.Size = new System.Drawing.Size(188, 49);
-            this.buttonRoute.TabIndex = 3;
-            this.buttonRoute.Text = "Маршрут";
-            this.buttonRoute.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonRoute.UseVisualStyleBackColor = true;
-            this.buttonRoute.Click += new System.EventHandler(this.buttonRoute_Click);
             // 
             // startPanel
             // 
@@ -399,51 +266,6 @@
             this.textLatA.Name = "textLatA";
             this.textLatA.Size = new System.Drawing.Size(117, 20);
             this.textLatA.TabIndex = 0;
-            // 
-            // btnAddPoint
-            // 
-            this.btnAddPoint.FlatAppearance.BorderSize = 0;
-            this.btnAddPoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddPoint.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAddPoint.Image = global::Map.Properties.Resources.add_geotag;
-            this.btnAddPoint.Location = new System.Drawing.Point(0, 129);
-            this.btnAddPoint.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAddPoint.Name = "btnAddPoint";
-            this.btnAddPoint.Size = new System.Drawing.Size(60, 65);
-            this.btnAddPoint.TabIndex = 6;
-            this.btnAddPoint.Text = " ";
-            this.btnAddPoint.UseVisualStyleBackColor = true;
-            this.btnAddPoint.Click += new System.EventHandler(this.btnAddPoint_Click);
-            // 
-            // btnRoute
-            // 
-            this.btnRoute.FlatAppearance.BorderSize = 0;
-            this.btnRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRoute.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnRoute.Image = global::Map.Properties.Resources.direction;
-            this.btnRoute.Location = new System.Drawing.Point(60, 129);
-            this.btnRoute.Margin = new System.Windows.Forms.Padding(0);
-            this.btnRoute.Name = "btnRoute";
-            this.btnRoute.Size = new System.Drawing.Size(65, 65);
-            this.btnRoute.TabIndex = 7;
-            this.btnRoute.Text = " ";
-            this.btnRoute.UseVisualStyleBackColor = true;
-            this.btnRoute.Click += new System.EventHandler(this.btnRoute_Click);
-            // 
-            // btnClearRoute
-            // 
-            this.btnClearRoute.FlatAppearance.BorderSize = 0;
-            this.btnClearRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearRoute.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnClearRoute.Image = global::Map.Properties.Resources.delete_geotag;
-            this.btnClearRoute.Location = new System.Drawing.Point(125, 129);
-            this.btnClearRoute.Margin = new System.Windows.Forms.Padding(0);
-            this.btnClearRoute.Name = "btnClearRoute";
-            this.btnClearRoute.Size = new System.Drawing.Size(60, 65);
-            this.btnClearRoute.TabIndex = 8;
-            this.btnClearRoute.Text = " ";
-            this.btnClearRoute.UseVisualStyleBackColor = true;
-            this.btnClearRoute.Click += new System.EventHandler(this.btnClearRoute_Click);
             // 
             // endPanel
             // 
@@ -574,25 +396,6 @@
             this.buttonArea2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonArea2.UseVisualStyleBackColor = true;
             // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::Map.Properties.Resources.delete_circle_fill;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(45, 49);
-            this.button2.TabIndex = 6;
-            this.button2.Tag = "2";
-            this.button2.Text = " ";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.buttonCheck_Click);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.buttonArea1);
@@ -619,25 +422,6 @@
             this.buttonArea1.Text = "Республика Коми";
             this.buttonArea1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonArea1.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::Map.Properties.Resources.delete_circle_fill;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(45, 49);
-            this.button1.TabIndex = 6;
-            this.button1.Tag = "1";
-            this.button1.Text = " ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.buttonCheck_Click);
             // 
             // panel3
             // 
@@ -666,25 +450,6 @@
             this.buttonArea3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonArea3.UseVisualStyleBackColor = true;
             // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::Map.Properties.Resources.delete_circle_fill;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(45, 49);
-            this.button3.TabIndex = 6;
-            this.button3.Tag = "3";
-            this.button3.Text = " ";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.buttonCheck_Click);
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.buttonArea4);
@@ -711,25 +476,6 @@
             this.buttonArea4.Text = "Челябинская область";
             this.buttonArea4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonArea4.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = global::Map.Properties.Resources.delete_circle_fill;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Margin = new System.Windows.Forms.Padding(0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(45, 49);
-            this.button4.TabIndex = 6;
-            this.button4.Tag = "4";
-            this.button4.Text = " ";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.buttonCheck_Click);
             // 
             // panel5
             // 
@@ -758,25 +504,6 @@
             this.buttonArea5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonArea5.UseVisualStyleBackColor = true;
             // 
-            // button5
-            // 
-            this.button5.BackgroundImage = global::Map.Properties.Resources.delete_circle_fill;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(0, 0);
-            this.button5.Margin = new System.Windows.Forms.Padding(0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(45, 49);
-            this.button5.TabIndex = 6;
-            this.button5.Tag = "5";
-            this.button5.Text = " ";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.buttonCheck_Click);
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.buttonArea6);
@@ -803,6 +530,154 @@
             this.buttonArea6.Text = "Оренбургская область";
             this.buttonArea6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonArea6.UseVisualStyleBackColor = true;
+            // 
+            // timerSubMenuR
+            // 
+            this.timerSubMenuR.Interval = 15;
+            this.timerSubMenuR.Tick += new System.EventHandler(this.timerSubMenuR_Tick);
+            // 
+            // buttonMinus
+            // 
+            this.buttonMinus.BackgroundImage = global::Map.Properties.Resources.minus;
+            this.buttonMinus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonMinus.Dock = System.Windows.Forms.DockStyle.Right;
+            this.buttonMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMinus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(178)))), ((int)(((byte)(65)))));
+            this.buttonMinus.Location = new System.Drawing.Point(884, 0);
+            this.buttonMinus.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonMinus.Name = "buttonMinus";
+            this.buttonMinus.Size = new System.Drawing.Size(30, 32);
+            this.buttonMinus.TabIndex = 1;
+            this.buttonMinus.Text = " ";
+            this.buttonMinus.UseVisualStyleBackColor = true;
+            this.buttonMinus.Click += new System.EventHandler(this.buttonMinus_Click);
+            // 
+            // buttonResize
+            // 
+            this.buttonResize.BackgroundImage = global::Map.Properties.Resources.arrow_right_up;
+            this.buttonResize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonResize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.buttonResize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonResize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(178)))), ((int)(((byte)(65)))));
+            this.buttonResize.Location = new System.Drawing.Point(914, 0);
+            this.buttonResize.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonResize.Name = "buttonResize";
+            this.buttonResize.Size = new System.Drawing.Size(30, 32);
+            this.buttonResize.TabIndex = 1;
+            this.buttonResize.Text = " ";
+            this.buttonResize.UseVisualStyleBackColor = true;
+            this.buttonResize.Click += new System.EventHandler(this.buttonResize_Click);
+            // 
+            // buttonClose
+            // 
+            this.buttonClose.BackgroundImage = global::Map.Properties.Resources.close;
+            this.buttonClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(178)))), ((int)(((byte)(65)))));
+            this.buttonClose.Location = new System.Drawing.Point(944, 0);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(30, 32);
+            this.buttonClose.TabIndex = 1;
+            this.buttonClose.Text = " ";
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::Map.Properties.Resources.delete_circle_fill;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Margin = new System.Windows.Forms.Padding(0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(45, 49);
+            this.button2.TabIndex = 6;
+            this.button2.Tag = "2";
+            this.button2.Text = " ";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.buttonCheck_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::Map.Properties.Resources.delete_circle_fill;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(45, 49);
+            this.button1.TabIndex = 6;
+            this.button1.Tag = "1";
+            this.button1.Text = " ";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.buttonCheck_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::Map.Properties.Resources.delete_circle_fill;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Margin = new System.Windows.Forms.Padding(0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(45, 49);
+            this.button3.TabIndex = 6;
+            this.button3.Tag = "3";
+            this.button3.Text = " ";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.buttonCheck_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = global::Map.Properties.Resources.delete_circle_fill;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(0, 0);
+            this.button4.Margin = new System.Windows.Forms.Padding(0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(45, 49);
+            this.button4.TabIndex = 6;
+            this.button4.Tag = "4";
+            this.button4.Text = " ";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.buttonCheck_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = global::Map.Properties.Resources.delete_circle_fill;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(0, 0);
+            this.button5.Margin = new System.Windows.Forms.Padding(0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(45, 49);
+            this.button5.TabIndex = 6;
+            this.button5.Tag = "5";
+            this.button5.Text = " ";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.buttonCheck_Click);
             // 
             // button6
             // 
@@ -842,10 +717,135 @@
             this.buttonArea.UseVisualStyleBackColor = true;
             this.buttonArea.Click += new System.EventHandler(this.buttonArea_Click);
             // 
-            // timerSubMenuR
+            // buttonRoute
             // 
-            this.timerSubMenuR.Interval = 15;
-            this.timerSubMenuR.Tick += new System.EventHandler(this.timerSubMenuR_Tick);
+            this.buttonRoute.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonRoute.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.buttonRoute.FlatAppearance.BorderSize = 0;
+            this.buttonRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRoute.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonRoute.Image = global::Map.Properties.Resources.angle_up;
+            this.buttonRoute.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonRoute.Location = new System.Drawing.Point(0, 0);
+            this.buttonRoute.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonRoute.MinimumSize = new System.Drawing.Size(188, 49);
+            this.buttonRoute.Name = "buttonRoute";
+            this.buttonRoute.Size = new System.Drawing.Size(188, 49);
+            this.buttonRoute.TabIndex = 3;
+            this.buttonRoute.Text = "Маршрут";
+            this.buttonRoute.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonRoute.UseVisualStyleBackColor = true;
+            this.buttonRoute.Click += new System.EventHandler(this.buttonRoute_Click);
+            // 
+            // btnAddPoint
+            // 
+            this.btnAddPoint.FlatAppearance.BorderSize = 0;
+            this.btnAddPoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPoint.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAddPoint.Image = global::Map.Properties.Resources.add_geotag_1;
+            this.btnAddPoint.Location = new System.Drawing.Point(0, 129);
+            this.btnAddPoint.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAddPoint.Name = "btnAddPoint";
+            this.btnAddPoint.Size = new System.Drawing.Size(60, 65);
+            this.btnAddPoint.TabIndex = 6;
+            this.btnAddPoint.Text = " ";
+            this.btnAddPoint.UseVisualStyleBackColor = true;
+            this.btnAddPoint.Click += new System.EventHandler(this.btnAddPoint_Click);
+            // 
+            // btnRoute
+            // 
+            this.btnRoute.FlatAppearance.BorderSize = 0;
+            this.btnRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRoute.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnRoute.Image = global::Map.Properties.Resources.direction;
+            this.btnRoute.Location = new System.Drawing.Point(60, 129);
+            this.btnRoute.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRoute.Name = "btnRoute";
+            this.btnRoute.Size = new System.Drawing.Size(65, 65);
+            this.btnRoute.TabIndex = 7;
+            this.btnRoute.Text = " ";
+            this.btnRoute.UseVisualStyleBackColor = true;
+            this.btnRoute.Click += new System.EventHandler(this.btnRoute_Click);
+            // 
+            // btnClearRoute
+            // 
+            this.btnClearRoute.FlatAppearance.BorderSize = 0;
+            this.btnClearRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearRoute.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnClearRoute.Image = global::Map.Properties.Resources.delete_geotag_1;
+            this.btnClearRoute.Location = new System.Drawing.Point(125, 129);
+            this.btnClearRoute.Margin = new System.Windows.Forms.Padding(0);
+            this.btnClearRoute.Name = "btnClearRoute";
+            this.btnClearRoute.Size = new System.Drawing.Size(60, 65);
+            this.btnClearRoute.TabIndex = 8;
+            this.btnClearRoute.Text = " ";
+            this.btnClearRoute.UseVisualStyleBackColor = true;
+            this.btnClearRoute.Click += new System.EventHandler(this.btnClearRoute_Click);
+            // 
+            // picRoute1
+            // 
+            this.picRoute1.BackgroundImage = global::Map.Properties.Resources.compass_direction_new;
+            this.picRoute1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.picRoute1.Enabled = false;
+            this.picRoute1.FlatAppearance.BorderSize = 0;
+            this.picRoute1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.picRoute1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(146)))), ((int)(((byte)(64)))));
+            this.picRoute1.Location = new System.Drawing.Point(0, 380);
+            this.picRoute1.Margin = new System.Windows.Forms.Padding(0);
+            this.picRoute1.Name = "picRoute1";
+            this.picRoute1.Size = new System.Drawing.Size(38, 41);
+            this.picRoute1.TabIndex = 4;
+            this.picRoute1.Text = " ";
+            this.picRoute1.UseVisualStyleBackColor = true;
+            this.picRoute1.Visible = false;
+            // 
+            // picRoute
+            // 
+            this.picRoute.BackgroundImage = global::Map.Properties.Resources.compass_direction_new;
+            this.picRoute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.picRoute.Enabled = false;
+            this.picRoute.FlatAppearance.BorderSize = 0;
+            this.picRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.picRoute.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(146)))), ((int)(((byte)(64)))));
+            this.picRoute.Location = new System.Drawing.Point(0, 88);
+            this.picRoute.Margin = new System.Windows.Forms.Padding(0);
+            this.picRoute.Name = "picRoute";
+            this.picRoute.Size = new System.Drawing.Size(38, 41);
+            this.picRoute.TabIndex = 3;
+            this.picRoute.Text = " ";
+            this.picRoute.UseVisualStyleBackColor = true;
+            // 
+            // picArea
+            // 
+            this.picArea.BackgroundImage = global::Map.Properties.Resources.markers_new;
+            this.picArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.picArea.Enabled = false;
+            this.picArea.FlatAppearance.BorderSize = 0;
+            this.picArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.picArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(146)))), ((int)(((byte)(64)))));
+            this.picArea.Location = new System.Drawing.Point(0, 37);
+            this.picArea.Margin = new System.Windows.Forms.Padding(0);
+            this.picArea.Name = "picArea";
+            this.picArea.Size = new System.Drawing.Size(38, 41);
+            this.picArea.TabIndex = 2;
+            this.picArea.Text = " ";
+            this.picArea.UseVisualStyleBackColor = true;
+            // 
+            // buttonMenu
+            // 
+            this.buttonMenu.BackgroundImage = global::Map.Properties.Resources.menu;
+            this.buttonMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonMenu.FlatAppearance.BorderSize = 0;
+            this.buttonMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(146)))), ((int)(((byte)(64)))));
+            this.buttonMenu.Location = new System.Drawing.Point(0, 0);
+            this.buttonMenu.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonMenu.Name = "buttonMenu";
+            this.buttonMenu.Size = new System.Drawing.Size(38, 32);
+            this.buttonMenu.TabIndex = 1;
+            this.buttonMenu.Text = " ";
+            this.buttonMenu.UseVisualStyleBackColor = true;
+            this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
             // 
             // Form1
             // 

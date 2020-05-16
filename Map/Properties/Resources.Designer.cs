@@ -73,6 +73,16 @@ namespace Map.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_geotag_1 {
+            get {
+                object obj = ResourceManager.GetObject("add-geotag-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap angle_down {
             get {
                 object obj = ResourceManager.GetObject("angle-down", resourceCulture);
@@ -266,6 +276,16 @@ namespace Map.Properties {
         internal static System.Drawing.Bitmap delete_geotag {
             get {
                 object obj = ResourceManager.GetObject("delete-geotag", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_geotag_1 {
+            get {
+                object obj = ResourceManager.GetObject("delete-geotag-1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
