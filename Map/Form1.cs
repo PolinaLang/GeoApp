@@ -16,6 +16,7 @@ using GMap.NET.WindowsForms.Markers;
 using GMap.NET.WindowsForms.ToolTips;
 using System.Windows.Input;
 using System.Runtime.InteropServices;
+using System.Windows;
 
 namespace Map
 {
@@ -24,7 +25,6 @@ namespace Map
     {
         internal readonly GMapOverlay Routes = new GMapOverlay("routes");
         internal readonly GMapOverlay Objects = new GMapOverlay("objects");
-        internal readonly GMapOverlay Markers = new GMapOverlay("markers");
 
         private List<Place> places;
         private List<PointLatLng> points = new List<PointLatLng>();
@@ -35,6 +35,7 @@ namespace Map
         private int btnTag;
         private object clickedPlace;
         double distance = 0; int duration = 0;
+        bool showPlaceInfo = false;
         public Form1()
         {
             InitializeComponent();
@@ -189,14 +190,16 @@ namespace Map
             gMap.ShowTileGridLines = false;
             gMap.MapProvider = GMapProviders.OpenStreetMap;
             GMaps.Instance.Mode = AccessMode.ServerOnly;
-            //GMaps.Instance.Mode = AccessMode.CacheOnly;
+            //Масштабирование карты при наведении на маркер
+            gMap.IgnoreMarkerOnMouseWheel = true;
             // Курсор мыши в центр карты
             gMap.MouseWheelZoomType = MouseWheelZoomType.MousePositionWithoutCenter;
             //Загрузка центральной точки на карте
-            gMap.SetPositionByKeywords("Perm");
-            //gMap.Position = new PointLatLng(56.984663, 57.227759);
+            //gMap.SetPositionByKeywords("Perm");
+            gMap.Position = new PointLatLng(56.984663, 57.227759);
             gMap.ShowCenter = false;
             gMap.OnMarkerClick += new MarkerClick(gMap_OnMarkerClick);
+            clearMap();
         }
 
         private void Markers_Load()
@@ -208,7 +211,9 @@ namespace Map
 
         private void ShowMarkers(int area)
         {
-            foreach(Place item in places)
+            GMapOverlay Markers = new GMapOverlay("markers");
+            gMap.Overlays.Add(Markers);
+            foreach (Place item in places)
             {
                 double geoLat = item.GeoLat;
                 double geoLng = item.GeoLng;
@@ -217,27 +222,27 @@ namespace Map
                     GMarkerGoogle marker = new GMarkerGoogle(new PointLatLng(geoLat, geoLng), GMarkerGoogleType.green);
                     marker.Tag = item.ID;
                     marker.ToolTipText = $"{item.Name}";
-                    var toolTip = new GMapRoundedToolTip(marker)
+                    var toolTip = new GMapBaloonToolTip(marker)
                     {
-                        Stroke = new Pen(new SolidBrush(Color.DarkGreen)),
+                        Stroke = new Pen(new SolidBrush(Color.FromArgb(68, 68, 68))),
                         Foreground = new SolidBrush(Color.Black),
-                        Fill = new SolidBrush(Color.White),
-                        Font = new Font("Verdana", 9, FontStyle.Regular),
+                        Fill = new SolidBrush(Color.FromArgb(20, 240, 240, 240)),
+                        Font = new Font("Verdana", 9, System.Drawing.FontStyle.Regular),
                     };
+                    toolTip.Format.Alignment = StringAlignment.Center;
+                    toolTip.Format.LineAlignment = StringAlignment.Center;
                     marker.ToolTip = toolTip;
                     Markers.Markers.Add(marker);
                     Markers.Id = item.AreaID.ToString();
-                    gMap.Overlays.Add(Markers);
                 }
-                
-
             }
-
+            
         }
 
         private void RemoveMarkers(int area)
         {
-            foreach(GMapOverlay item in gMap.Overlays)
+
+            foreach (GMapOverlay item in gMap.Overlays)
             {
                 if (item.Id == area.ToString())
                 {
@@ -248,15 +253,30 @@ namespace Map
 
         private void gMap_OnMarkerClick(GMapMarker item, System.Windows.Forms.MouseEventArgs e)
         {
-            clickedPlace = item.Tag;
-            //placeInfoShow(clickedPlace);
+            //clickedPlace = item.Tag;
         }
 
-        
+        private void gMap_Click(object sender, EventArgs e)
+        {
+            if (((GMapControl)sender).IsMouseOverMarker)
+            {
+                MessageBox.Show($"{((GMapControl)sender).Tag}");
+                
+                if (clickedPlace != null)
+                    MessageBox.Show(clickedPlace.ToString());
+                //placeInfoShow(clickedPlace);
+            }
+
+        }
+
+
         private void placeInfoShow(object tag)
         {
-            Form placeInfo = new PlaceInfo(clickedPlace);
-            placeInfo.ShowDialog();
+            PlaceInfo p = new PlaceInfo(clickedPlace);
+            p.ShowDialog();
+            //Form placeInfo = new PlaceInfo(clickedPlace);
+            //placeInfo.ShowDialog();
+            showPlaceInfo = p.showInfo();
         }
 
         private void buttonCheck_Click(object sender, EventArgs e)
@@ -359,19 +379,18 @@ namespace Map
 
                 textLatA.Text = lat + "";
                 textLngA.Text = lng + "";
-
-                
             }
             
+
         }
 
         private void btnAddPoint_Click(object sender, EventArgs e)
         {
             PointLatLng p = new PointLatLng(Convert.ToDouble(textLatA.Text), Convert.ToDouble(textLngA.Text));
+            gMap.Overlays.Add(Objects);
             points.Add(p);
             GMapMarker m = new GMarkerGoogle(p, GMarkerGoogleType.orange_dot);
             Objects.Markers.Add(m);
-            gMap.Overlays.Add(Objects);
         }
 
         private void btnClearRoute_Click(object sender, EventArgs e)
@@ -399,7 +418,6 @@ namespace Map
 
         private void btnRoute_Click(object sender, EventArgs e)
         {
-            
             RoutingProvider rp = gMap.MapProvider as RoutingProvider;
             if (rp == null)
             {
@@ -408,8 +426,10 @@ namespace Map
 
             try
             {
+                gMap.Overlays.Add(Routes);
                 for (int i = 1; i < points.Count(); i++)
                 {
+
                     MapRoute r = rp.GetRoute(points[i - 1], points[i], false, false, (int)gMap.Zoom);
                     GMapRoute route = new GMapRoute(r.Points, r.Name);
                     route.Stroke = new Pen(Color.Red, 2);
@@ -419,16 +439,13 @@ namespace Map
                     duration += Convert.ToInt32(r.Duration.Substring(0, r.Duration.Length - 4));
                 }
 
-                gMap.Overlays.Add(Routes);
-
                 var start = points[0];
                 var end = points[points.Count() - 1];
                 GMapMarker m1 = new GMarkerGoogle(start, GMarkerGoogleType.green_dot);
                 GMapMarker m2 = new GMarkerGoogle(end, GMarkerGoogleType.red_dot);
-
+                gMap.Overlays.Add(Objects);
                 Objects.Markers.Add(m1);
                 Objects.Markers.Add(m2);
-                gMap.Overlays.Add(Objects);
 
                 gMap.ZoomAndCenterRoutes("routes");
                 gMap.Refresh();

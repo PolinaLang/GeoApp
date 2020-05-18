@@ -12,6 +12,7 @@ namespace Map
 {
     public partial class PlaceInfo : Form
     {
+        bool show = true;
         public PlaceInfo(Object tag)
         {
             InitializeComponent();
@@ -22,6 +23,12 @@ namespace Map
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            showInfo();
+        }
+
+        public bool showInfo()
+        {
+            return show = false;
         }
     }
 }
