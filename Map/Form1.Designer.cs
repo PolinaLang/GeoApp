@@ -308,7 +308,6 @@
             this.gMap.Zoom = 0D;
             this.gMap.OnMapZoomChanged += new GMap.NET.MapZoomChanged(this.gMap_OnMapZoomChanged);
             this.gMap.Load += new System.EventHandler(this.gMap_Load);
-            this.gMap.Click += new System.EventHandler(this.gMap_Click);
             this.gMap.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gMap_MouseClick);
             this.gMap.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gMap_MouseDoubleClick);
             // 

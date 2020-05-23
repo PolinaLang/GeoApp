@@ -17,6 +17,7 @@ using GMap.NET.WindowsForms.ToolTips;
 using System.Windows.Input;
 using System.Runtime.InteropServices;
 using System.Windows;
+using System.Runtime.CompilerServices;
 
 namespace Map
 {
@@ -35,7 +36,6 @@ namespace Map
         private int btnTag;
         private object clickedPlace;
         double distance = 0; int duration = 0;
-        bool showPlaceInfo = false;
         public Form1()
         {
             InitializeComponent();
@@ -171,6 +171,7 @@ namespace Map
 
         private void gMap_Load(object sender, EventArgs e)
         {
+            
             // Перетаскивание карты
             gMap.CanDragMap = true;
             // Перетаскивание карты левой кнопкой мыши
@@ -199,8 +200,12 @@ namespace Map
             gMap.Position = new PointLatLng(56.984663, 57.227759);
             gMap.ShowCenter = false;
             gMap.OnMarkerClick += new MarkerClick(gMap_OnMarkerClick);
+            gMap.OnMarkerEnter += GMap_OnMarkerEnter;
             clearMap();
+            
         }
+
+        
 
         private void Markers_Load()
         {
@@ -226,8 +231,8 @@ namespace Map
                     {
                         Stroke = new Pen(new SolidBrush(Color.FromArgb(68, 68, 68))),
                         Foreground = new SolidBrush(Color.Black),
-                        Fill = new SolidBrush(Color.FromArgb(20, 240, 240, 240)),
-                        Font = new Font("Verdana", 9, System.Drawing.FontStyle.Regular),
+                        Fill = new SolidBrush(Color.FromArgb(150, 240, 240, 240)),
+                        Font = new Font("Verdana", 9, System.Drawing.FontStyle.Bold),
                     };
                     toolTip.Format.Alignment = StringAlignment.Center;
                     toolTip.Format.LineAlignment = StringAlignment.Center;
@@ -253,30 +258,19 @@ namespace Map
 
         private void gMap_OnMarkerClick(GMapMarker item, System.Windows.Forms.MouseEventArgs e)
         {
-            //clickedPlace = item.Tag;
+            
         }
 
-        private void gMap_Click(object sender, EventArgs e)
+        private void GMap_OnMarkerEnter(GMapMarker item)
         {
-            if (((GMapControl)sender).IsMouseOverMarker)
-            {
-                MessageBox.Show($"{((GMapControl)sender).Tag}");
-                
-                if (clickedPlace != null)
-                    MessageBox.Show(clickedPlace.ToString());
-                //placeInfoShow(clickedPlace);
-            }
-
+            clickedPlace = item.Tag;
         }
 
-
-        private void placeInfoShow(object tag)
+        private void placeInfoShow(Place place)
         {
-            PlaceInfo p = new PlaceInfo(clickedPlace);
+            
+            Form p = new PlaceInfo(place);
             p.ShowDialog();
-            //Form placeInfo = new PlaceInfo(clickedPlace);
-            //placeInfo.ShowDialog();
-            showPlaceInfo = p.showInfo();
         }
 
         private void buttonCheck_Click(object sender, EventArgs e)
@@ -380,7 +374,19 @@ namespace Map
                 textLatA.Text = lat + "";
                 textLngA.Text = lng + "";
             }
-            
+            if (((GMapControl)sender).IsMouseOverMarker)
+            {
+                if (clickedPlace != null)
+                {
+                    foreach (Place place in places)
+                    {
+                        if (place.ID == (int)clickedPlace)
+                            placeInfoShow(place);
+
+                    }
+                }
+                    
+            }
 
         }
 
@@ -455,7 +461,7 @@ namespace Map
 
             } catch
             {
-                MessageBox.Show("Сначала нужно добавить точки в маршрут!");
+                MessageBox.Show("Не удалось построить маршрут!\nПопробуйте еще раз.");
             }
 
 
@@ -471,6 +477,7 @@ namespace Map
         private void gMap_MouseDoubleClick(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             gMap.Zoom++;
+
         }
 
         
