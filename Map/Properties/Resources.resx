@@ -124,8 +124,8 @@
   <data name="delete-circle1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete-circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="forest-full" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\forest-full.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="delete-geotag-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete-geotag-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="compass-direction-new" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\compass-direction-new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,14 +133,17 @@
   <data name="direction" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\direction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete-geotag" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete-geotag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="circle_dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circle_dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="arrow-right-up" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow-right-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="angle-right-light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\angle-right-light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="markers-new" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\markers-new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,6 +154,12 @@
   <data name="delete-circle4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete-circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="angle-left-light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\angle-left-light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="angle-right-dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\angle-right-dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="delete-circle2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete-circle1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,8 +169,8 @@
   <data name="compass-drc" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\compass-drc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="compass-direction" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\compass-direction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="delete-circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete-circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="vector-low-poly-forest" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vector-low-poly-forest.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,14 +184,17 @@
   <data name="compass-direction2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\compass-direction2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete-circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete-circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="forest-full" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\forest-full.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="menu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete-geotag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete-geotag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="arrow-left-down" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow-left-down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,6 +208,9 @@
   <data name="delete-circle_fill" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete-circle_fill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="compass-direction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\compass-direction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="add-geotag" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add-geotag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -204,6 +219,12 @@
   </data>
   <data name="compass-direction-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\compass-direction-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circle_light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circle_light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="angle-left-dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\angle-left-dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="checked-circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\checked-circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,7 +235,16 @@
   <data name="checked-circle1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\checked-circle1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete-geotag-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete-geotag-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="angle-left-dark-b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\angle-left-dark-b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="angle-left-light-b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\angle-left-light-b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="angle-right-dark-b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\angle-right-dark-b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="angle-right-light-b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\angle-right-light-b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

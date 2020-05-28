@@ -93,6 +93,86 @@ namespace Map.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap angle_left_dark {
+            get {
+                object obj = ResourceManager.GetObject("angle-left-dark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap angle_left_dark_b {
+            get {
+                object obj = ResourceManager.GetObject("angle-left-dark-b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap angle_left_light {
+            get {
+                object obj = ResourceManager.GetObject("angle-left-light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap angle_left_light_b {
+            get {
+                object obj = ResourceManager.GetObject("angle-left-light-b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap angle_right_dark {
+            get {
+                object obj = ResourceManager.GetObject("angle-right-dark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap angle_right_dark_b {
+            get {
+                object obj = ResourceManager.GetObject("angle-right-dark-b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap angle_right_light {
+            get {
+                object obj = ResourceManager.GetObject("angle-right-light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap angle_right_light_b {
+            get {
+                object obj = ResourceManager.GetObject("angle-right-light-b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap angle_up {
             get {
                 object obj = ResourceManager.GetObject("angle-up", resourceCulture);
@@ -146,6 +226,26 @@ namespace Map.Properties {
         internal static System.Drawing.Bitmap checked_circle1 {
             get {
                 object obj = ResourceManager.GetObject("checked-circle1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap circle_dark {
+            get {
+                object obj = ResourceManager.GetObject("circle_dark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap circle_light {
+            get {
+                object obj = ResourceManager.GetObject("circle_light", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
