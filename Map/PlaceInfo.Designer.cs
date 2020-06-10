@@ -121,6 +121,7 @@ namespace Map
             // 
             // label5
             // 
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Image = global::Map.Properties.Resources.angle_left_dark_b;
             this.label5.Location = new System.Drawing.Point(13, 130);
             this.label5.Name = "label5";
@@ -133,6 +134,7 @@ namespace Map
             // 
             // label4
             // 
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Image = global::Map.Properties.Resources.angle_right_dark_b;
             this.label4.Location = new System.Drawing.Point(438, 130);
             this.label4.Name = "label4";
@@ -146,6 +148,7 @@ namespace Map
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.ForeColor = System.Drawing.Color.Transparent;
             this.label3.Image = global::Map.Properties.Resources.circle_dark;
             this.label3.Location = new System.Drawing.Point(254, 244);
@@ -159,6 +162,7 @@ namespace Map
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.ForeColor = System.Drawing.Color.Transparent;
             this.label2.Image = global::Map.Properties.Resources.circle_dark;
             this.label2.Location = new System.Drawing.Point(229, 244);
@@ -173,6 +177,7 @@ namespace Map
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.ForeColor = System.Drawing.Color.Transparent;
             this.label1.Image = global::Map.Properties.Resources.circle_light;
             this.label1.Location = new System.Drawing.Point(191, 244);

@@ -418,6 +418,7 @@
     <Content Include="pic\609-1.jpg" />
     <Content Include="pic\609-2.jpg" />
     <Content Include="pic\609-3.jpg" />
+    <None Include="Resources\forest-full_m.png" />
     <None Include="Resources\angle-right-light-b.png" />
     <None Include="Resources\angle-right-dark-b.png" />
     <None Include="Resources\angle-left-light-b.png" />

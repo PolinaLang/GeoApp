@@ -413,6 +413,16 @@ namespace Map.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap forest_full_m {
+            get {
+                object obj = ResourceManager.GetObject("forest-full_m", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap forest_part {
             get {
                 object obj = ResourceManager.GetObject("forest-part", resourceCulture);

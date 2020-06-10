@@ -35,6 +35,7 @@ namespace Map
         private int[] check = {0, 0, 0, 0, 0, 0, 0};
         private int btnTag;
         private object clickedPlace;
+        private int countPoint = 0;
         double distance = 0; int duration = 0;
         public Form1()
         {
@@ -146,6 +147,20 @@ namespace Map
             timerHideMenu.Start();
         }
 
+        private void picArea_Click(object sender, EventArgs e)
+        {
+            timerHideMenu.Start();
+        }
+
+        private void picRoute_Click(object sender, EventArgs e)
+        {
+            timerHideMenu.Start();
+        }
+
+        private void picRoute1_Click(object sender, EventArgs e)
+        {
+            timerHideMenu.Start();
+        }
         private void timerHideMenu_Tick(object sender, EventArgs e)
         {
             if (isHideMenu)
@@ -392,11 +407,19 @@ namespace Map
 
         private void btnAddPoint_Click(object sender, EventArgs e)
         {
-            PointLatLng p = new PointLatLng(Convert.ToDouble(textLatA.Text), Convert.ToDouble(textLngA.Text));
-            gMap.Overlays.Add(Objects);
-            points.Add(p);
-            GMapMarker m = new GMarkerGoogle(p, GMarkerGoogleType.orange_dot);
-            Objects.Markers.Add(m);
+            try
+            {
+                PointLatLng p = new PointLatLng(Convert.ToDouble(textLatA.Text), Convert.ToDouble(textLngA.Text));
+                gMap.Overlays.Add(Objects);
+                points.Add(p);
+                GMapMarker m = new GMarkerGoogle(p, GMarkerGoogleType.orange_dot);
+                Objects.Markers.Add(m);
+                countPoint++;
+            }
+            catch
+            {
+                MessageBox.Show("Сначала необходимо выбрать точку на карте!");
+            }
         }
 
         private void btnClearRoute_Click(object sender, EventArgs e)
@@ -420,51 +443,58 @@ namespace Map
             textLngA.Text = "";
             textDist.Text = "";
             textTime.Text = "";
+            countPoint = 0;
         }
 
         private void btnRoute_Click(object sender, EventArgs e)
         {
-            RoutingProvider rp = gMap.MapProvider as RoutingProvider;
-            if (rp == null)
+            if (countPoint < 2)
             {
-                rp = GMapProviders.OpenStreetMap;
-            }
-
-            try
+                MessageBox.Show("Нужно добавить хотя бы 2 точки на карту!");
+            } else
             {
-                gMap.Overlays.Add(Routes);
-                for (int i = 1; i < points.Count(); i++)
+                RoutingProvider rp = gMap.MapProvider as RoutingProvider;
+                if (rp == null)
                 {
-
-                    MapRoute r = rp.GetRoute(points[i - 1], points[i], false, false, (int)gMap.Zoom);
-                    GMapRoute route = new GMapRoute(r.Points, r.Name);
-                    route.Stroke = new Pen(Color.Red, 2);
-                    route.IsVisible = true;
-                    Routes.Routes.Add(route);
-                    distance += r.Distance;
-                    duration += Convert.ToInt32(r.Duration.Substring(0, r.Duration.Length - 4));
+                    rp = GMapProviders.OpenStreetMap;
                 }
 
-                var start = points[0];
-                var end = points[points.Count() - 1];
-                GMapMarker m1 = new GMarkerGoogle(start, GMarkerGoogleType.green_dot);
-                GMapMarker m2 = new GMarkerGoogle(end, GMarkerGoogleType.red_dot);
-                gMap.Overlays.Add(Objects);
-                Objects.Markers.Add(m1);
-                Objects.Markers.Add(m2);
+                try
+                {
+                    gMap.Overlays.Add(Routes);
+                    for (int i = 1; i < points.Count(); i++)
+                    {
 
-                gMap.ZoomAndCenterRoutes("routes");
-                gMap.Refresh();
+                        MapRoute r = rp.GetRoute(points[i - 1], points[i], false, false, (int)gMap.Zoom);
+                        GMapRoute route = new GMapRoute(r.Points, r.Name);
+                        route.Stroke = new Pen(Color.Red, 2);
+                        route.IsVisible = true;
+                        Routes.Routes.Add(route);
+                        distance += r.Distance;
+                        duration += Convert.ToInt32(r.Duration.Substring(0, r.Duration.Length - 4));
+                    }
 
-                textDist.Text = Math.Round(distance, 2) + " км.";
-                textTime.Text = getTime(duration);
+                    var start = points[0];
+                    var end = points[points.Count() - 1];
+                    GMapMarker m1 = new GMarkerGoogle(start, GMarkerGoogleType.green_dot);
+                    GMapMarker m2 = new GMarkerGoogle(end, GMarkerGoogleType.red_dot);
+                    gMap.Overlays.Add(Objects);
+                    Objects.Markers.Add(m1);
+                    Objects.Markers.Add(m2);
 
-            } catch
-            {
-                MessageBox.Show("Не удалось построить маршрут!\nПопробуйте еще раз.");
+                    gMap.ZoomAndCenterRoutes("routes");
+                    gMap.Refresh();
+
+                    textDist.Text = Math.Round(distance, 2) + " км.";
+                    textTime.Text = getTime(duration);
+
+                }
+                catch
+                {
+                    MessageBox.Show("Не удалось построить маршрут!\nПопробуйте еще раз.");
+                }
             }
-
-
+            
         }
 
         private string getTime(int min)

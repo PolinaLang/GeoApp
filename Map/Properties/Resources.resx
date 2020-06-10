@@ -139,11 +139,14 @@
   <data name="menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="angle-right-light-b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\angle-right-light-b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="arrow-right-up" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow-right-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="angle-right-light" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\angle-right-light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="compass-direction-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\compass-direction-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="markers-new" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\markers-new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,17 +157,23 @@
   <data name="delete-circle4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete-circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="angle-left-light" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\angle-left-light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="angle-right-dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\angle-right-dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="delete-circle2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete-circle1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="angle-left-dark-b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\angle-left-dark-b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="angle-down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\angle-down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="checked-circle_fill" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\checked-circle_fill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="angle-left-light-b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\angle-left-light-b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="compass-drc" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\compass-drc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,6 +199,9 @@
   <data name="menu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="angle-right-dark-b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\angle-right-dark-b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,8 +214,8 @@
   <data name="add-geotag-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add-geotag-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="angle-down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\angle-down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="angle-left-light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\angle-left-light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="delete-circle_fill" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete-circle_fill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,8 +229,8 @@
   <data name="markers1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\markers1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="compass-direction-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\compass-direction-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="angle-right-light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\angle-right-light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="circle_light" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\circle_light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,16 +247,7 @@
   <data name="checked-circle1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\checked-circle1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="angle-left-dark-b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\angle-left-dark-b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="angle-left-light-b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\angle-left-light-b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="angle-right-dark-b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\angle-right-dark-b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="angle-right-light-b" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\angle-right-light-b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="forest-full_m" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\forest-full_m.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

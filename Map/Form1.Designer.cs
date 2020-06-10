@@ -131,7 +131,7 @@
             // 
             // buttonResize
             // 
-            this.buttonResize.BackgroundImage = global::Map.Properties.Resources.arrow_right_up;
+            this.buttonResize.BackgroundImage = global::Map.Properties.Resources.arrow_left_down;
             this.buttonResize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonResize.Dock = System.Windows.Forms.DockStyle.Right;
             this.buttonResize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -184,7 +184,6 @@
             // 
             this.picRoute1.BackgroundImage = global::Map.Properties.Resources.compass_direction_new;
             this.picRoute1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picRoute1.Enabled = false;
             this.picRoute1.FlatAppearance.BorderSize = 0;
             this.picRoute1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.picRoute1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(146)))), ((int)(((byte)(64)))));
@@ -196,12 +195,12 @@
             this.picRoute1.Text = " ";
             this.picRoute1.UseVisualStyleBackColor = true;
             this.picRoute1.Visible = false;
+            this.picRoute1.Click += new System.EventHandler(this.picRoute1_Click);
             // 
             // picRoute
             // 
             this.picRoute.BackgroundImage = global::Map.Properties.Resources.compass_direction_new;
             this.picRoute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picRoute.Enabled = false;
             this.picRoute.FlatAppearance.BorderSize = 0;
             this.picRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.picRoute.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(146)))), ((int)(((byte)(64)))));
@@ -212,12 +211,12 @@
             this.picRoute.TabIndex = 3;
             this.picRoute.Text = " ";
             this.picRoute.UseVisualStyleBackColor = true;
+            this.picRoute.Click += new System.EventHandler(this.picRoute_Click);
             // 
             // picArea
             // 
             this.picArea.BackgroundImage = global::Map.Properties.Resources.markers_new;
             this.picArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picArea.Enabled = false;
             this.picArea.FlatAppearance.BorderSize = 0;
             this.picArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.picArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(146)))), ((int)(((byte)(64)))));
@@ -228,6 +227,7 @@
             this.picArea.TabIndex = 2;
             this.picArea.Text = " ";
             this.picArea.UseVisualStyleBackColor = true;
+            this.picArea.Click += new System.EventHandler(this.picArea_Click);
             // 
             // buttonMenu
             // 
@@ -328,6 +328,7 @@
             // 
             // buttonRoute
             // 
+            this.buttonRoute.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonRoute.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonRoute.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.buttonRoute.FlatAppearance.BorderSize = 0;
@@ -364,7 +365,7 @@
             this.labelLng.AutoSize = true;
             this.labelLng.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelLng.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.labelLng.Location = new System.Drawing.Point(6, 51);
+            this.labelLng.Location = new System.Drawing.Point(3, 51);
             this.labelLng.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelLng.Name = "labelLng";
             this.labelLng.Size = new System.Drawing.Size(36, 16);
@@ -403,6 +404,7 @@
             // 
             // btnAddPoint
             // 
+            this.btnAddPoint.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddPoint.FlatAppearance.BorderSize = 0;
             this.btnAddPoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddPoint.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -418,6 +420,7 @@
             // 
             // btnRoute
             // 
+            this.btnRoute.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRoute.FlatAppearance.BorderSize = 0;
             this.btnRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRoute.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -433,6 +436,7 @@
             // 
             // btnClearRoute
             // 
+            this.btnClearRoute.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClearRoute.FlatAppearance.BorderSize = 0;
             this.btnClearRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearRoute.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -829,6 +833,7 @@
             // 
             // buttonArea
             // 
+            this.buttonArea.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonArea.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonArea.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.buttonArea.FlatAppearance.BorderSize = 0;
